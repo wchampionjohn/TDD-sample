@@ -1,7 +1,11 @@
 class Changer
   def self.change amount
-    return [1, 1, 1] if amount == 3
-    return [1, 1] if amount == 2
-    [1]
+    result = []
+    while amount > 0 do
+      result << 1
+      amount -= 1
+    end
+
+    result
   end
 end
