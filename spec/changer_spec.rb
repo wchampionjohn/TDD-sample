@@ -9,6 +9,7 @@ describe 'Coin changer' do
     [5, [5]],
     [6, [5, 1]],
     [7, [5, 1, 1]],
+    [10, [10]],
   ].each do |input, expectation|
     it "shuold return #{expectation} if gvien #{input}" do
       expect(Changer.change(input)).to eq expectation
