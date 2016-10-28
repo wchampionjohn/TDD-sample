@@ -15,9 +15,15 @@ describe 'Coin changer' do
     [15, [10, 5]],
     [17, [10, 5, 1, 1]],
     [50, [50]],
-    [51, [51]],
+    [51, [50, 1]],
     [100, [100]],
     [101, [100, 1]],
+    [200, [200]],
+    [300, [200, 100]],
+    [500, [500]],
+    [501, [500, 1]],
+    [1000, [1000]],
+    [2000, [2000]],
   ].each do |input, expectation|
     it "shuold return #{expectation} if gvien #{input}" do
       expect(Changer.change(input)).to eq expectation
