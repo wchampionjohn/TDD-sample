@@ -1,9 +1,7 @@
 class Changer
   def self.change amount
-    if amount == 2
-      [1, 1]
-    else
-      [1]
-    end
+    return [1, 1, 1] if amount == 3
+    return [1, 1] if amount == 2
+    [1]
   end
 end
