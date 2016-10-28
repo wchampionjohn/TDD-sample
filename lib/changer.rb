@@ -11,15 +11,11 @@ class Changer
     1,
   ]
   def self.change amount
-    result = []
-
-    CHANGE_UNIT.each do |change|
+    CHANGE_UNIT.each_with_object([]) do |change, result|
       while amount >= change do
         result << change
         amount -= change
       end
     end
-
-    result
   end
 end
